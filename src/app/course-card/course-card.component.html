@@ -11,8 +11,12 @@
       </div>
     </div>
     <div class="cardFooterControl">
-      <mat-icon>add</mat-icon>
-      <mat-icon>remove</mat-icon>
+      <button *ngIf="addDisable" (click)="toggleAddDisable()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button *ngIf="!addDisable" (click)="toggleAddDisable()">
+        <mat-icon>remove</mat-icon>
+      </button>
     </div>
   </mat-card-footer>
 </mat-card>

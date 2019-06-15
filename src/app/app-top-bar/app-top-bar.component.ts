@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CoursesControlService} from '../services/courses-control.service';
+import {Store} from '@ngrx/store';
 
 @Component({
   selector: 'app-app-top-bar',
@@ -7,13 +7,13 @@ import {CoursesControlService} from '../services/courses-control.service';
   styleUrls: ['./app-top-bar.component.css']
 })
 export class AppTopBarComponent implements OnInit {
-  counter = null;
+  counter = 0;
 
-  constructor(private coursesControlService: CoursesControlService) {
+  constructor(private store: Store<{ counter: number }>) {
   }
 
   ngOnInit() {
-    this.counter = this.coursesControlService.counter;
+    this.store.select('counter').subscribe(counter => this.counter = counter);
   }
 
 }

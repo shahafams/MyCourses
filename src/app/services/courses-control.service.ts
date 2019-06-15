@@ -4,10 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CoursesControlService {
-  counter = 0;
+
   constructor() { }
 
-  private addCourse() {
-    this.counter += 1;
-  }
 }

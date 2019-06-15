@@ -1,16 +1,23 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Card} from '../entities/Card';
+import {Store} from '@ngrx/store';
+import {addCourseAction, removeCourseAction} from '../../store/actions/counter.actions';
 
 @Component({
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css']
 })
-export class CourseCardComponent implements OnInit {
+export class CourseCardComponent {
   @Input() card: Card;
-  constructor() { }
+  addDisable = true;
 
-  ngOnInit() {
+  constructor(private store: Store<object>) {
+  }
+
+  toggleAddDisable() {
+    this.addDisable ? this.store.dispatch(addCourseAction()) : this.store.dispatch(removeCourseAction());
+    this.addDisable = !this.addDisable;
   }
 
 }

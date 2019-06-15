@@ -1,4 +1,4 @@
-import { Action } from '@ngrx/store';
+import {Action} from '@ngrx/store';
 import {mockData} from '../../app/mockCourses';
 import {GET_COURSES} from '../actions/consts.actions';
 

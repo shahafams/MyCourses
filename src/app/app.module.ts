@@ -11,7 +11,8 @@ import {
 } from '@angular/material';
 import {CourseCardComponent} from './course-card/course-card.component';
 import {ListCardsComponent} from './list-cards/list-cards.component';
-import {coursesReducer} from '../store/reducers/consts.reducer';
+import {counterReducer} from '../store/reducers/counter.reducer';
+import {coursesReducer} from '../store/reducers/courses.reducer';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import {coursesReducer} from '../store/reducers/consts.reducer';
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
-    StoreModule.forRoot({consts: coursesReducer})
+    StoreModule.forRoot({
+      consts: coursesReducer,
+      counter: counterReducer,
+    })
   ],
   exports: [
   ],
