@@ -11,8 +11,9 @@ import {
 } from '@angular/material';
 import {CourseCardComponent} from './course-card/course-card.component';
 import {ListCardsComponent} from './list-cards/list-cards.component';
-import {counterReducer} from '../store/reducers/counter.reducer';
+import {selectedCoursesReducer} from '../store/reducers/selectedCourses.reducer';
 import {coursesReducer} from '../store/reducers/courses.reducer';
+import { YourCartComponent } from './your-cart/your-cart.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {coursesReducer} from '../store/reducers/courses.reducer';
     AppTopBarComponent,
     CourseCardComponent,
     ListCardsComponent,
+    YourCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import {coursesReducer} from '../store/reducers/courses.reducer';
     MatIconModule,
     StoreModule.forRoot({
       consts: coursesReducer,
-      counter: counterReducer,
+      selectedCourses: selectedCoursesReducer,
     })
   ],
   exports: [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 
 @Component({
@@ -9,11 +9,12 @@ import {Store} from '@ngrx/store';
 export class AppTopBarComponent implements OnInit {
   counter = 0;
 
-  constructor(private store: Store<{ counter: number }>) {
+  constructor(private store: Store<{ selectedCourses: object }>) {
   }
 
   ngOnInit() {
-    this.store.select('counter').subscribe(counter => this.counter = counter);
+    this.store.select('selectedCourses')
+      .subscribe(counter => this.counter = Object.keys(counter).length);
   }
 
 }
