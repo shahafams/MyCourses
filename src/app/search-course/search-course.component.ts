@@ -8,7 +8,7 @@ import {CoursesControlService} from '../services/courses-control.service';
 })
 export class SearchCourseComponent implements OnInit {
   value = '';
-
+  sortValue = 'default';
   constructor(private coursesControlService: CoursesControlService) {
   }
 
@@ -17,11 +17,17 @@ export class SearchCourseComponent implements OnInit {
   }
 
   onChange() {
+    this.sortValue = 'default';
     this.coursesControlService.mockDataAfterSearch(this.value);
   }
 
   cleanValue() {
     this.value = '';
+    this.sortValue = 'default';
     this.onChange();
+  }
+
+  sortBy() {
+    this.coursesControlService.sortBy(this.sortValue);
   }
 }

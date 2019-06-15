@@ -12,7 +12,7 @@ export const mockData = {
     title: 'Course 2',
     content: 'The complexity of the Israeli society has various manifestations. Although it has been established as ' +
     'a Jewish state, demographic and cultural processes are changing and shaping the face of the Israeli society. ',
-    price: 10,
+    price: 20,
     level: 'Advanced',
   },
   3: {
@@ -21,7 +21,7 @@ export const mockData = {
     content: 'The two “Principles of Chemical Engineering” courses (1M and 2M) deal with momentum, heat and mass tran' +
     'port phenomena and as such provide an in-depth understanding of fundamentals underlying phenomena' +
     'involving fluid flow',
-    price: 10,
+    price: 15,
     level: 'Beginner',
   },
   4: {
@@ -29,7 +29,7 @@ export const mockData = {
     title: 'Course 4',
     content: 'Understanding chemical kinetics theory\n' +
     'Obtaining fundamental skills to design homogeneous chemical reactors operating isothermally',
-    price: 10,
+    price: 5,
     level: 'Beginner',
   },
   5: {
@@ -44,7 +44,7 @@ export const mockData = {
     title: 'Course 6',
     content: ' The main objectives are to acknowledge the atomic bonding and structure of' +
     ' engineering materials and its linkage to the mechanical and physical properties.',
-    price: 10,
+    price: 20,
     level: 'Advanced',
   },
   7: {
@@ -52,7 +52,7 @@ export const mockData = {
     title: 'Course 7',
     content: 'To become familiar with and understand the basics and techniques of managing' +
     'a construction project from its inception to its completion.',
-    price: 10,
+    price: 15,
     level: 'Beginner',
   },
   8: {
@@ -61,7 +61,7 @@ export const mockData = {
     content: 'This course creates the foundation for a student’s career in construction management. It is' +
     'important to listen to the lectures, pay attention during recitations and internalize the material for' +
     'the long term.',
-    price: 10,
+    price: 30,
     level: 'Advanced',
   },
   9: {
@@ -79,15 +79,7 @@ export const mockData = {
     content: 'At the end of the course, the student will be able to write metabolic equations of common ' +
     'processes in environmental engineering, assess the biolocal processes under different environments, ' +
     'assess biological reaction kinetics and perform basic design of common biological reactors.',
-    price: 10,
+    price: 30,
     level: 'Advanced',
   },
-  11: {
-    id: 11,
-    title: 'Course 11',
-    content: 'Safety instructions, measurements and accuracy, combustion reactions, concentration ' +
-    'determination by titration, determination of hydration water in copper sulfate. ',
-    price: 10,
-    level: 'Advanced',
-  }
 };

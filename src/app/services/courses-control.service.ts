@@ -6,7 +6,7 @@ import {Store} from '@ngrx/store';
 })
 export class CoursesControlService {
   mockData: object;
-
+  filterData;
   @Output() search: EventEmitter<object> = new EventEmitter();
 
   constructor(private store: Store<{ consts: object }>) {
@@ -14,16 +14,39 @@ export class CoursesControlService {
   }
 
   mockDataAfterSearch(value) {
-    let filterData;
     if (value !== '') {
       let filterAsObj = {};
-      filterData = Object.values(this.mockData)
+      this.filterData = Object.values(this.mockData)
         .filter(item => item.title.toLowerCase().indexOf(value.toLowerCase()) > -1);
-      filterData.forEach(data => filterAsObj = {...filterAsObj, [data.id]: data});
+      this.filterData.forEach(data => filterAsObj = {...filterAsObj, [data.id]: data});
     } else {
-      filterData = this.mockData;
+      this.filterData = this.mockData;
     }
-    this.search.emit(filterData);
+    this.search.emit(this.filterData);
   }
 
+  sortBy(value) {
+    if (value !== 'default') {
+      let filterAsObj = {};
+        this.filterData = Object.values(this.filterData ? this.filterData : this.mockData)
+          .sort((a, b) => {
+            if (value === 'price') {
+              return a[value] - b[value];
+            } else {
+              if ( a[value] < b[value] ) {
+                  return -1;
+                }
+                if ( a[value] > b[value] ) {
+                  return 1;
+                }
+                return 0;
+            }
+          });
+
+        this.filterData.forEach(data => filterAsObj = {...filterAsObj, [data.id]: data});
+    } else {
+      this.filterData = this.mockData;
+    }
+    this.search.emit(this.filterData);
+  }
 }

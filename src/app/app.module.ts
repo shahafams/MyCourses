@@ -11,6 +11,7 @@ import {
   MatDividerModule,
   MatFormFieldModule,
   MatInputModule,
+  MatSelectModule,
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -40,6 +41,7 @@ import { SearchCourseComponent } from './search-course/search-course.component';
     FormsModule,
     MatInputModule,
     BrowserAnimationsModule,
+    MatSelectModule,
     StoreModule.forRoot({
       consts: coursesReducer,
       selectedCourses: selectedCoursesReducer,

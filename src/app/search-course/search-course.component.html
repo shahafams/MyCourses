@@ -14,3 +14,11 @@
     <mat-icon>close</mat-icon>
   </button>
 </mat-form-field>
+<mat-form-field class="sort-from-field">
+  <mat-label>Sort</mat-label>
+  <mat-select [(value)]="sortValue" (selectionChange)="sortBy()">
+    <mat-option value="default">default</mat-option>
+    <mat-option value="price">price</mat-option>
+    <mat-option value="level">level</mat-option>
+  </mat-select>
+</mat-form-field>
