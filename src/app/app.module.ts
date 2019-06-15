@@ -1,23 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { AppTopBarComponent } from './app-top-bar/app-top-bar.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {StoreModule} from '@ngrx/store';
+import {AppComponent} from './app.component';
+import {AppTopBarComponent} from './app-top-bar/app-top-bar.component';
 
 import {
   MatToolbarModule,
+  MatCardModule,
+  MatIconModule,
 } from '@angular/material';
+import {CourseCardComponent} from './course-card/course-card.component';
+import {ListCardsComponent} from './list-cards/list-cards.component';
+import {coursesReducer} from '../store/reducers/consts.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppTopBarComponent
+    AppTopBarComponent,
+    CourseCardComponent,
+    ListCardsComponent,
   ],
   imports: [
     BrowserModule,
     MatToolbarModule,
+    MatCardModule,
+    MatIconModule,
+    StoreModule.forRoot({consts: coursesReducer})
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

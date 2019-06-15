@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {loadCoursesAction} from '../store/actions/consts.actions';
+import {Store} from '@ngrx/store';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shahafCourses';
+  constructor(private store: Store<object>) {
+    this.store.dispatch(loadCoursesAction());
+  }
 }
