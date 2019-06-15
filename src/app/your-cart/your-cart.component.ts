@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Store} from '@ngrx/store';
 
 @Component({
   selector: 'app-your-cart',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./your-cart.component.css']
 })
 export class YourCartComponent implements OnInit {
+  selectedCourses = {};
+  sumPrice = 0;
 
-  constructor() { }
+  constructor(private store: Store<{ selectedCourses: object }>) {
+  }
 
   ngOnInit() {
+    this.store.select('selectedCourses')
+      .subscribe(selectedCourses => {
+        this.selectedCourses = selectedCourses;
+        this.sumPrice = 0;
+        Object.values(selectedCourses).forEach(course => {
+          this.sumPrice += course.price;
+        });
+      });
   }
 
 }

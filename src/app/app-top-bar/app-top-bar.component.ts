@@ -14,7 +14,7 @@ export class AppTopBarComponent implements OnInit {
 
   ngOnInit() {
     this.store.select('selectedCourses')
-      .subscribe(counter => this.counter = Object.keys(counter).length);
+      .subscribe(selectedCourses => this.counter = Object.keys(selectedCourses).length);
   }
 
 }

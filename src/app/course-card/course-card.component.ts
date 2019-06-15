@@ -17,8 +17,8 @@ export class CourseCardComponent {
 
   toggleAddDisable() {
     this.addDisable ?
-      this.store.dispatch(addCourseAction(this.card))
-      : this.store.dispatch(removeCourseAction(this.card));
+      this.store.dispatch(addCourseAction({id: this.card.id, title: this.card.title, price: this.card.price}))
+      : this.store.dispatch(removeCourseAction({id: this.card.id, title: this.card.title, price: this.card.price}));
     this.addDisable = !this.addDisable;
   }
 

@@ -1,0 +1,14 @@
+.selectedContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectedFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.title {
+  margin-bottom: 20px;
+}

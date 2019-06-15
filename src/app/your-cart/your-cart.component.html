@@ -1,8 +1,12 @@
-<span>Your Cart</span>
+<div class="title">Your Cart</div>
 <mat-card>
-  <mat-card-content>
-
+  <mat-card-content class="selectedContent" *ngFor="let course of selectedCourses | keyvalue">
+    <div>{{course.value.title}}</div>
+    <div>{{course.value.price}}$</div>
   </mat-card-content>
-  <mat-card-footer>
+  <mat-divider></mat-divider>
+  <mat-card-footer class="selectedFooter">
+    <div>Sum</div>
+    <div>{{sumPrice}}$</div>
   </mat-card-footer>
 </mat-card>

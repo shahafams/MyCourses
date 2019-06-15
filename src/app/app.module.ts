@@ -8,6 +8,7 @@ import {
   MatToolbarModule,
   MatCardModule,
   MatIconModule,
+  MatDividerModule,
 } from '@angular/material';
 import {CourseCardComponent} from './course-card/course-card.component';
 import {ListCardsComponent} from './list-cards/list-cards.component';
@@ -28,6 +29,7 @@ import { YourCartComponent } from './your-cart/your-cart.component';
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
+    MatDividerModule,
     StoreModule.forRoot({
       consts: coursesReducer,
       selectedCourses: selectedCoursesReducer,
