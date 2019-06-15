@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
+import {CoursesControlService} from '../services/courses-control.service';
 
 @Component({
   selector: 'app-search-course',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCourseComponent implements OnInit {
   value = '';
-  constructor() { }
 
-  ngOnInit() {
+  constructor(private coursesControlService: CoursesControlService) {
   }
 
+  ngOnInit() {
+    this.onChange();
+  }
+
+  onChange() {
+    this.coursesControlService.mockDataAfterSearch(this.value);
+  }
+
+  cleanValue() {
+    this.value = '';
+    this.onChange();
+  }
 }

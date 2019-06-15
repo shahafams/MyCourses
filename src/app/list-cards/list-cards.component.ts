@@ -1,15 +1,18 @@
-import {Component} from '@angular/core';
-import {Store} from '@ngrx/store';
+import {Component, OnInit} from '@angular/core';
+import {CoursesControlService} from '../services/courses-control.service';
 
 @Component({
   selector: 'app-list-cards',
   templateUrl: './list-cards.component.html',
   styleUrls: ['./list-cards.component.css']
 })
-export class ListCardsComponent {
+export class ListCardsComponent implements OnInit {
   mockData: object;
 
-  constructor(private store: Store<{ consts: object }>) {
-    this.store.select('consts').subscribe(coursers => this.mockData = coursers);
+  constructor(private coursesControlService: CoursesControlService) {
+  }
+
+  ngOnInit() {
+    this.coursesControlService.search.subscribe(data => this.mockData = data);
   }
 }
