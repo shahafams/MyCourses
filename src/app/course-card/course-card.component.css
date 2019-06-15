@@ -1,0 +1,21 @@
+.mat-card-footer{
+  display: flex;
+  justify-content: space-around;
+  position:absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+.mat-card{
+  width: 500px;
+  height: 170px;
+  position: relative;
+}
+
+.cardFooter{
+  margin: auto;
+}
+
+.cardFooterControl{
+  margin: auto;
+}
