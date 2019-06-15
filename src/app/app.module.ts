@@ -9,12 +9,17 @@ import {
   MatCardModule,
   MatIconModule,
   MatDividerModule,
+  MatFormFieldModule,
+  MatInputModule,
 } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import {CourseCardComponent} from './course-card/course-card.component';
 import {ListCardsComponent} from './list-cards/list-cards.component';
 import {selectedCoursesReducer} from '../store/reducers/selectedCourses.reducer';
 import {coursesReducer} from '../store/reducers/courses.reducer';
 import { YourCartComponent } from './your-cart/your-cart.component';
+import { SearchCourseComponent } from './search-course/search-course.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,7 @@ import { YourCartComponent } from './your-cart/your-cart.component';
     CourseCardComponent,
     ListCardsComponent,
     YourCartComponent,
+    SearchCourseComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +36,10 @@ import { YourCartComponent } from './your-cart/your-cart.component';
     MatCardModule,
     MatIconModule,
     MatDividerModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot({
       consts: coursesReducer,
       selectedCourses: selectedCoursesReducer,
