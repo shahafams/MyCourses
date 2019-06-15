@@ -5,7 +5,7 @@ export const mockData = {
     content: 'The goal of the course is to teach basic techniques of laboratory tests of water and wastewater' +
     ' treatment engineering-related issues. The lab exercises simulate water and wastewater treatment processes.',
     price: 10,
-    level: 3,
+    level: 'Beginner',
   },
   2: {
     id: 2,
@@ -13,7 +13,7 @@ export const mockData = {
     content: 'The complexity of the Israeli society has various manifestations. Although it has been established as ' +
     'a Jewish state, demographic and cultural processes are changing and shaping the face of the Israeli society. ',
     price: 10,
-    level: 3,
+    level: 'Advanced',
   },
   3: {
     id: 3,
@@ -22,7 +22,7 @@ export const mockData = {
     'port phenomena and as such provide an in-depth understanding of fundamentals underlying phenomena' +
     'involving fluid flow',
     price: 10,
-    level: 3,
+    level: 'Beginner',
   },
   4: {
     id: 4,
@@ -30,14 +30,14 @@ export const mockData = {
     content: 'Understanding chemical kinetics theory\n' +
     'Obtaining fundamental skills to design homogeneous chemical reactors operating isothermally',
     price: 10,
-    level: 3,
+    level: 'Beginner',
   },
   5: {
     id: 5,
     title: 'Course 5',
     content: 'This course provides a basic knowledge in materials science and engineering',
     price: 10,
-    level: 3,
+    level: 'Advanced',
   },
   6: {
     id: 6,
@@ -45,7 +45,7 @@ export const mockData = {
     content: ' The main objectives are to acknowledge the atomic bonding and structure of' +
     ' engineering materials and its linkage to the mechanical and physical properties.',
     price: 10,
-    level: 3,
+    level: 'Advanced',
   },
   7: {
     id: 7,
@@ -53,7 +53,7 @@ export const mockData = {
     content: 'To become familiar with and understand the basics and techniques of managing' +
     'a construction project from its inception to its completion.',
     price: 10,
-    level: 3,
+    level: 'Beginner',
   },
   8: {
     id: 8,
@@ -62,7 +62,7 @@ export const mockData = {
     'important to listen to the lectures, pay attention during recitations and internalize the material for' +
     'the long term.',
     price: 10,
-    level: 3,
+    level: 'Advanced',
   },
   9: {
     id: 9,
@@ -71,7 +71,7 @@ export const mockData = {
     ' available for their execution, and the technological reasons for determining their choice. Develop' +
     ' observation skills and get acquainted with the construction-site experience.',
     price: 10,
-    level: 3,
+    level: 'Beginner',
   },
   10: {
     id: 10,
@@ -80,7 +80,7 @@ export const mockData = {
     'processes in environmental engineering, assess the biolocal processes under different environments, ' +
     'assess biological reaction kinetics and perform basic design of common biological reactors.',
     price: 10,
-    level: 3,
+    level: 'Advanced',
   },
   11: {
     id: 11,
@@ -88,6 +88,6 @@ export const mockData = {
     content: 'Safety instructions, measurements and accuracy, combustion reactions, concentration ' +
     'determination by titration, determination of hydration water in copper sulfate. ',
     price: 10,
-    level: 3,
+    level: 'Advanced',
   }
 };

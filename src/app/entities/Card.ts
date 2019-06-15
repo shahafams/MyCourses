@@ -4,7 +4,7 @@ export class Card {
     public title: string,
     public content: string,
     public price: number,
-    public level: number
+    public level: string
   ) {
   }
 }
